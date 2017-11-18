@@ -1,0 +1,10 @@
+switch.switch:
+  friendly_name: Arbetsrum inner
+switch.switch_2:
+  friendly_name: Arbetsrum ytter
+switch.telldus_tzwp100_plugin_switch_switch:
+  friendly_name: Sängladdare
+switch.philio_technology_corporation_pan114_smart_energy_plug_in_switch_switch:
+  friendly_name: Gästrum inner
+
+
