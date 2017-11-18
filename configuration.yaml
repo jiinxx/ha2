@@ -1,14 +1,11 @@
 homeassistant:
   name: Home
-  latitude: 56.25
-  longitude: 12.9667
+  latitude: 59.433776
+  longitude: 18.323753
   elevation: 23
   unit_system: metric
   time_zone: Europe/Stockholm
   customize: !include customize.yaml
-
-# Show links to resources in log and frontend
-introduction:
 
 # Enables the frontend
 frontend:
@@ -56,6 +53,12 @@ sensor:
 # Text to speech
 tts:
   - platform: google
+
+zwave:
+  usb_path: /dev/ttyACM0
+  
+###############################
+# INCLUDES
 
 group: !include groups.yaml
 automation: !include automations.yaml
