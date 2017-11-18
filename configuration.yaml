@@ -56,6 +56,11 @@ tts:
 
 zwave:
   usb_path: /dev/ttyACM0
+
+mqtt:
+  broker: 192.168.1.9
+  username: !secret mqtt_username
+  password: !secret mqtt_password
   
 ###############################
 # INCLUDES
@@ -63,3 +68,5 @@ zwave:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+device_tracker: !include device_tracker.yaml
+
