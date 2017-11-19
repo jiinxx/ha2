@@ -1,3 +1,11 @@
   - platform: owntracks
     max_gps_accuracy: 200
     waypoints: True
+    
+#  - platform: volvooncall
+#    username: !secret volvooncall_username
+#    password: !secret volcooncall_password
+#    resources:
+#      - doors
+#      - lock
+#      - heater

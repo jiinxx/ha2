@@ -61,6 +61,17 @@ mqtt:
   broker: 192.168.1.9
   username: !secret mqtt_username
   password: !secret mqtt_password
+
+volvooncall:
+  username: !secret volvooncall_username
+  password: !secret volcooncall_password
+  
+logger:
+  default: info
+#  logs:
+#    homeassistant.components.volvooncall: debug
+#    homeassistant.components.*.volvooncall: debug
+#    volvooncall: debug
   
 ###############################
 # INCLUDES
