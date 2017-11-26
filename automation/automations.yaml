@@ -1,0 +1,38 @@
+- alias: 'Windowlights on when sun sets'
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: switch.turn_on
+    entity_id: group.custom_all_lights
+- alias: 'Windowlights off when sun rises'
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: switch.turn_off
+    entity_id: group.custom_all_lights
+- alias: 'Remote off'
+  trigger:
+    platform: state
+    entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+    to: 'off'
+  action:
+    service: switch.turn_off
+    entity_id: group.custom_all_lights
+- alias: 'Remote on'
+  trigger:
+    platform: state
+    entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: group.custom_all_lights
+- alias: 'God morgon'
+  trigger:
+    platform: state
+    entity_id: switch.morgon
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: light.tradfri_bulb_e27_ws_opal_980lm

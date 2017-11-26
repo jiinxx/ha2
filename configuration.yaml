@@ -72,12 +72,31 @@ logger:
 #    homeassistant.components.volvooncall: debug
 #    homeassistant.components.*.volvooncall: debug
 #    volvooncall: debug
+#tellstick:
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
   
 ###############################
 # INCLUDES
 
 group: !include groups.yaml
-automation: !include automations.yaml
+automation: !include_dir_merge_list automation
 script: !include scripts.yaml
 device_tracker: !include device_tracker.yaml
+
+variable:
+  countdown_timer:
+    value: 30
+    attributes:
+      friendly_name: 'Countdown'
+      icon: mdi:alarm
+  countdown_trigger:
+    name: Countdown
+    value: False
+  light_scene:
+    value: 'normal'
+    attributes:
+      previous: ''
+    restore: true
 

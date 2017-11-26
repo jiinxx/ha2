@@ -4,4 +4,3 @@ custom_all_lights:
       - switch.switch
       - switch.switch_2
       - switch.telldus_tzwp100_plugin_switch_switch
-      - switch.telldus_tzwp100_plugin_switch_switch_2
