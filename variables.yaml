@@ -1,0 +1,17 @@
+#countdown_timer:
+#  value: 30
+#  attributes:
+#    friendly_name: 'Countdown'
+#    icon: mdi:alarm
+#countdown_trigger:
+#  name: Countdown
+#  value: False
+#light_scene:
+#  value: 'normal'
+#  attributes:
+#    previous: ''
+#  restore: true
+morning:
+  name: Morning
+  value: False
+  restore: true

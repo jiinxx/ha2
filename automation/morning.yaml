@@ -1,0 +1,20 @@
+- alias: 'Turn on light when morning'
+  trigger:
+    platform: state
+    entity_id: variable.morning
+    to: 'True'
+  action: 
+     service: light.turn_on
+     entity_id: light.tradfri_bulb_e27_opal_1000lm
+     data:
+       brightness: 150
+       
+- alias: 'Set morning when sleep ends'
+  trigger: 
+    platform: state
+    entity_id: switch.sleeping
+    to: 'off'
+  action:
+    service: light.turn_on
+    entity_id: light.tradfri_bulb_e27_ws_opal_980lm
+   
