@@ -50,7 +50,11 @@ sun:
 sensor:
   - platform: yr
   - platform: rfxtrx
-    automatic_add: True
+    #automatic_add: True
+    devices:
+      085002005701000d59:
+        name: temp_backside
+    #sensor.085002005701000d59_temperature
 
 # Text to speech
 tts:
@@ -83,10 +87,7 @@ rfxtrx:
   device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11SEJ09-if00-port0
   debug: True
   
-switch:
-  platform: rfxtrx
-  automatic_add: True
-  
+switch: !include switch.yaml
 
 #sensor:
 

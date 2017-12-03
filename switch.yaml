@@ -1,0 +1,41 @@
+- platform: rfxtrx
+  automatic_add: False
+  devices:
+    0b110000004c02e201010f80:
+      name: stairs_lower
+    0b110000004c02e201010f80:
+      name: remote_12
+    0b110001004c02e203010f80:
+      name: nedre_tv
+    0b11000c004c02e202010f80:
+      name: remote_14
+    0b110003002d25f201010f80:
+      name: nexaremote_1
+    0b110005002d25f202010f80:
+      name: nexaremote_2
+    0b110007002d25f203010f70:
+      name: nexaremote_3
+    0b110001004c02e205010f80:
+      name: remote_21
+    0b110002004c02e206010f80:
+      name: remote_22
+    0b110003004c02e207010f80:
+      name: remote_23
+    0b110004004c02e208010f80:
+      name: remote_24
+    0b110006004c02e209010f80:
+      name: remote_31
+    0b110007004c02e20a010f80:
+      name: remote_32
+    0b110008004c02e20b010f80:
+      name: remote_33
+    0b110009004c02e20c010f80:
+      name: remote_34
+    0b11000c004c02e20d010f80:
+      name: remote_41
+    0b11000d004c02e20e010f80:
+      name: remote_42
+    0b11000e004c02e20f010f80:
+      name: remote_43
+    0b11000f004c02e210010f80:
+      name: remote_44
