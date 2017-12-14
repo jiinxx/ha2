@@ -50,12 +50,10 @@ sun:
 sensor:
   - platform: yr
   - platform: rfxtrx
-    #automatic_add: True
+    automatic_add: False
     devices:
       085002005701000d59:
         name: temp_backside
-    #sensor.085002005701000d59_temperature
-
 # Text to speech
 tts:
   - platform: google
@@ -79,6 +77,7 @@ logger:
 #    homeassistant.components.*.volvooncall: debug
 #    volvooncall: debug
 #tellstick:
+
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
@@ -89,12 +88,20 @@ rfxtrx:
   
 switch: !include switch.yaml
 
-#sensor:
-
-
+panel_custom:
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml
+    
 light:
   - platform: rfxtrx
     automatic_add: True
+verisure:
+  username: !secret verisure_username
+  password: !secret verisure_password
+
 
 #light:
 #  platform: hue

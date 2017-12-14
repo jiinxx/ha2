@@ -11,8 +11,6 @@ light.tradfri_bulb_e27_ws_opal_980lm:
 switch.telldus_tzwp100_plugin_switch_switch_4:
   friendly_name: garage
 switch.0b110000004c02e201010f80:
-  friendly_name: Nedre trapp
-switch.0b110000004c02e201010f80:
   friendly_name: Remote 1-2
 switch.0b110001004c02e203010f80:
   friendly_name: Nedre TV

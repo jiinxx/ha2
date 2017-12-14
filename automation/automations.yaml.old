@@ -5,7 +5,7 @@
   action:
     service: switch.turn_on
     entity_id: group.custom_all_lights
-
+    
 - alias: 'Windowlights off when sun rises'
   trigger:
     platform: sun
@@ -22,7 +22,7 @@
   action:
     service: switch.turn_off
     entity_id: group.custom_all_lights
-
+    
 - alias: 'Remote on'
   trigger:
     platform: state
@@ -31,18 +31,3 @@
   action:
     service: switch.turn_on
     entity_id: group.custom_all_lights
-
-- alias: 'Garagelight on when sunrise'
-  trigger:
-    platform: sun
-    event: sunrise
-  action:
-    service: switch.turn_on
-    entity_id: switch.garage_switch
-- alias: 'Windowlights off when sunset'
-  trigger:
-    platform: sun
-    event: sunset
-  action:
-    service: switch.turn_off
-    entity_id: switch.garage_switch

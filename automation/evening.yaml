@@ -1,0 +1,15 @@
+- alias: 'Turn on sleepcharger after 22'
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '22:00:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.masterbedroom_bed_u_switch
+- alias: 'Light entry light at sunset'
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: light.turn_on
+    entity_id: light.light_1

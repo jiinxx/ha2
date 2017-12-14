@@ -3,11 +3,11 @@
   devices:
     0b110000004c02e201010f80:
       name: stairs_lower
-    0b110000004c02e201010f80:
+    0b11000c004c02e202010f80:
       name: remote_12
     0b110001004c02e203010f80:
       name: nedre_tv
-    0b11000c004c02e202010f80:
+    0b110010004c02e204010f70:
       name: remote_14
     0b110003002d25f201010f80:
       name: nexaremote_1

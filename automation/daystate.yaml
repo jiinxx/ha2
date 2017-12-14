@@ -1,0 +1,52 @@
+- alias: 'Morning'
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '05:00:00'
+  action:
+    - service: variable.set_variable
+      data:
+        variable: state_of_day
+        value: 'morning'
+- alias: 'Fornoon'
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '09:00:00'
+  action:
+    - service: variable.set_variable
+      data:
+        variable: state_of_day
+        value: 'fornoon'
+- alias: 'Afternoon'
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '12:00:00'
+  action:
+    - service: variable.set_variable
+      data:
+        variable: state_of_day
+        value: 'afternoon'
+- alias: 'Evening'
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '17:00:00'
+  action:
+    - service: variable.set_variable
+      data:
+        variable: state_of_day
+        value: 'evening'
+- alias: 'Night'
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '23:00:00'
+  action:
+    - service: variable.set_variable
+      data:
+        variable: state_of_day
+        value: 'night'
+  
+  
