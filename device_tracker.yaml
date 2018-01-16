@@ -1,6 +1,8 @@
   - platform: owntracks
     max_gps_accuracy: 200
     waypoints: True
+  - platform: nmap_tracker
+    hosts: 192.168.0.0/24
     
 #  - platform: volvooncall
 #    username: !secret volvooncall_username

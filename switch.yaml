@@ -2,19 +2,13 @@
   automatic_add: False
   devices:
     0b110000004c02e201010f80:
-      name: stairs_lower
+      name: remote_11
     0b11000c004c02e202010f80:
       name: remote_12
     0b110001004c02e203010f80:
-      name: nedre_tv
+      name: remote_13
     0b110010004c02e204010f70:
       name: remote_14
-    0b110003002d25f201010f80:
-      name: nexaremote_1
-    0b110005002d25f202010f80:
-      name: nexaremote_2
-    0b110007002d25f203010f70:
-      name: nexaremote_3
     0b110001004c02e205010f80:
       name: remote_21
     0b110002004c02e206010f80:
@@ -39,3 +33,19 @@
       name: remote_43
     0b11000f004c02e210010f80:
       name: remote_44
+      
+    0b110003002d25f201010f80:
+      name: nexaremote_1
+    0b110005002d25f202010f80:
+      name: nexaremote_2
+    0b110007002d25f203010f70:
+      name: nexaremote_3
+      
+    0b11000011bc0cfe01010f70:
+      name: switch_11
+    0b11000013bc0cfe01010f70:
+      name: switch_13
+    0b11000041bc0cfe01010f70:
+      name: switch_41
+    0b11000042bc0cfe01010f70:
+      name: switch_42

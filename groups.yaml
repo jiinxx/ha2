@@ -1,12 +1,9 @@
 custom_all_lights:
   name: All Lights
   entities:
-    - switch.office_bi_switch
-    - switch.office_u_switch
-    - switch.guestroom_philio_switch
-    - switch.stairs_lower
-    - switch.nedre_tv
-    - switch.remote_42
+    - group.custom_office
+    - group.custom_guest_room
+    - group.custom_living_room
 custom_guest_room:
   name: Guest room
   entities:
@@ -16,3 +13,16 @@ custom_office:
   entities:
     - switch.office_bi_switch
     - switch.office_u_switch
+custom_living_room:
+  name: Living room
+  entities:
+    - switch.switch_11
+    - switch.switch_13
+    - switch.switch_42
+zones:
+  name: Zones
+  entities:
+    - switch.doorbell
+    - sensor.template_last_motion
+    - binary_sensor.groundfloor
+    - binary_sensor.upstairs

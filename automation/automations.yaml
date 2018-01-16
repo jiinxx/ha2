@@ -38,7 +38,7 @@
     event: sunrise
   action:
     service: switch.turn_on
-    entity_id: switch.garage_switch
+    entity_id: switch.garage1_switch
 - alias: 'Windowlights off when sunset'
   trigger:
     platform: sun

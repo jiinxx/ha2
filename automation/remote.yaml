@@ -1,3 +1,41 @@
+- alias: 'Remote 11 on'
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: switch.remote_11
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: group.custom_living_room
+- alias: 'Remote 11 off'
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: switch.remote_11
+    to: 'off'
+  action:
+    service: switch.turn_off
+    entity_id: group.custom_living_room
+
+- alias: 'Remote 12 on'
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: switch.remote_12
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: switch.switch_42
+- alias: 'Remote 11 off'
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: switch.remote_12
+    to: 'off'
+  action:
+    service: switch.turn_off
+    entity_id: switch.switch_42
+      
 - alias: 'Remote 21 on'
   hide_entity: True
   trigger:
@@ -54,3 +92,4 @@
   action:
     service: light.turn_off
     entity_id: light.maskros
+ 

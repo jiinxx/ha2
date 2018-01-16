@@ -54,6 +54,28 @@ sensor:
     devices:
       085002005701000d59:
         name: temp_backside
+  - platform: mqtt
+    state_topic: "home/sparsnas"
+    name: "Sparsnäs energy consumption momentary"
+    unit_of_measurement: "W"
+    value_template: '{{ value_json.Watt | round(1) }}'
+  - platform: mqtt
+    state_topic: "home/sparsnas"
+    name: "Sparsnäs energy consumption over time"
+    unit_of_measurement: "kWh"
+    value_template: '{{ value_json.kWh | round(1) }}'
+  - platform: mqtt
+    state_topic: "home/sparsnas"
+    name: "Sparsnäs Battery remaining"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.battery | round(1) }}'
+  - platform: rest
+    resource: http://192.168.1.9:18003/location?group=home&user=Urban
+    value_template: '{{value_json.users.Urban[0].location}}'
+    method: GET
+    name: Urban Internal location
+    scan_interval: 5
+
 # Text to speech
 tts:
   - platform: google
@@ -87,13 +109,6 @@ rfxtrx:
   debug: True
   
 switch: !include switch.yaml
-
-panel_custom:
-  - name: floorplan
-    sidebar_title: Floorplan
-    sidebar_icon: mdi:home
-    url_path: floorplan
-    config: !include floorplan.yaml
     
 light:
   - platform: rfxtrx
@@ -116,4 +131,6 @@ script: !include scripts.yaml
 device_tracker: !include device_tracker.yaml
 
 variable: !include variables.yaml
+binary_sensor: !include binary_sensors.yaml
+panel_custom: !include panel_custom.yaml
 

@@ -22,3 +22,10 @@ switch.0b110005002d25f202010f80:
   friendly_name: Nexaremote 2
 switch.0b110007002d25f203010f70:
   friendly_name: Nexaremote 3
+
+  binary_sensor.groundfloor:
+    custom_ui_state_card: floorplan
+    config: !include groundfloor.yaml
+  binary_sensor.upstairs:
+    custom_ui_state_card: floorplan
+    config: !include upstairs.yaml
