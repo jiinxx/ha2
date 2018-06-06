@@ -4,8 +4,8 @@
   url_path: groundfloor
   config: !include groundfloor.yaml
 
-- name: upstairs
-  sidebar_title: Upstairs
-  sidebar_icon: mdi:home
-  url_path: upstairs
-  config: !include upstairs.yaml
+#- name: upstairs
+#  sidebar_title: Upstairs
+#  sidebar_icon: mdi:home
+#  url_path: upstairs
+#  config: !include upstairs.yaml

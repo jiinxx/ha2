@@ -14,9 +14,7 @@ frontend:
 config:
 
 http:
-  # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: ha.rubble.se
   trusted_networks:
     - 192.168.1.2
@@ -25,26 +23,19 @@ http:
   login_attempts_threshold: 5
 
 updater:
-
 discovery:
-conversation:
 history:
 logbook:
 map:
 sun:
 
-influxdb:
-  host: 192.168.1.9
-
 sensor:
   - platform: yr
   - platform: rfxtrx
-    automatic_add: true
+    automatic_add: False
     devices:
       085002005701000d59:
         name: temp_backside
-      temp1:
-        name: Livingroom 1
   - platform: mqtt
     state_topic: "home/sparsnas"
     name: "Sparsnäs energy consumption momentary"
@@ -94,7 +85,6 @@ logger:
 #    homeassistant.components.volvooncall: debug
 #    homeassistant.components.*.volvooncall: debug
 #    volvooncall: debug
-#tellstick:
 
 nest:
   client_id: !secret nest_client_id
@@ -113,10 +103,25 @@ verisure:
   username: !secret verisure_username
   password: !secret verisure_password
 
-
-#light:
-#  platform: hue
-#  host: 192.168.1.12
+google_assistant:
+  project_id: someproject-2d0b8
+  client_id: d2XFm4Ufv7GGkYGYnKELFKRO6lKlWyecjVsEQJvYkA9afZCPst4lpq31iQCRK5aCQkZ0D9F6iLMwKPk2
+  access_token: Y0xeKVc69GvfsAbRMZ47IXelQt4usvPr0EmEca53HpnPcG9WIjiM1exVR6JBGF15zzC6NMKNugTqgBxV
+  #agent_user_id: 
+  api_key: [a Homegraph API Key generated for the Google Actions project]
+  exposed_domains:
+    - switch
+    - light
+    - group
+  entity_config:
+    switch.kitchen:
+      name: Custom Name for Google Assistant
+      aliases:
+        - bright lights
+        - entry lights
+      type: light
+    light.living_room:
+      expose: false
   
 ###############################
 # INCLUDES
@@ -127,6 +132,6 @@ script: !include scripts.yaml
 device_tracker: !include device_tracker.yaml
 
 variable: !include variables.yaml
-#binary_sensor: !include binary_sensors.yaml
+binary_sensor: !include binary_sensors.yaml
 panel_custom: !include panel_custom.yaml
 

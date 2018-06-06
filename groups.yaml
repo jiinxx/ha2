@@ -1,9 +1,24 @@
 custom_all_lights:
   name: All Lights
   entities:
-    - group.custom_office
+    - group.custom_midfloor
+    - group.custom_groundfloor
+    - group.custom_outside
+custom_midfloor:
+  name: Midfloor
+  entities:
     - group.custom_guest_room
+    - group.custom_office
+    - light.maskros
+custom_groundfloor:
+  name: Groundfloor
+  entities:
     - group.custom_living_room
+    - switch.garage1_switch #trapp
+custom_outside:
+  name: Outside
+  entities:
+    - light.light_1
 custom_guest_room:
   name: Guest room
   entities:
@@ -16,13 +31,28 @@ custom_office:
 custom_living_room:
   name: Living room
   entities:
-    - switch.switch_11
     - switch.switch_13
     - switch.switch_42
-zones:
-  name: Zones
+custom_temp:
+  name: Temp
   entities:
-    - switch.doorbell
-    - sensor.template_last_motion
-    - binary_sensor.groundfloor
-    - binary_sensor.upstairs
+    - sensor.temp1
+    - sensor.temp1_2
+    - sensor.temp2
+    - sensor.temp2_2
+    - sensor.temp3
+    - sensor.temp3_2
+    - sensor.temp4
+    - sensor.temp4_2
+    - sensor.temp5
+    - sensor.temp5_2
+    - sensor.temp6
+    - sensor.temp6_2
+    - sensor.temp7
+    - sensor.temp7_2
+    - sensor.temp8
+    - sensor.temp8_2
+    - sensor.temp9
+    - sensor.temp9_2
+    - sensor.temp10
+    - sensor.temp10_2

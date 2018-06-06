@@ -1,0 +1,228 @@
+switch.office_u_switch:
+  name: Window (outer)
+  platform: zwave
+  unique_id: 2-72057594076282880
+switch.office_bi_switch:
+  name: Window (inner)
+  platform: zwave
+  unique_id: 6-72057594143391744
+switch.guestroom_philio_switch:
+  name: Window
+  platform: zwave
+  unique_id: 9-72057594193723392
+switch.masterbedroom_bed_u_switch:
+  name: Telefonladdare
+  platform: zwave
+  unique_id: 11-72057594227277824
+switch.switch:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277609472
+switch.garage1_switch:
+  name: Trappa
+  platform: zwave
+  unique_id: 18-72057594344718336
+light.light_4:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:8b:d5:77-01
+light.maskros:
+  name: Maskros lampan
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:0f:ae:9c-01
+light.light_1:
+  name: Utebelysning (Entre)
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:8c:9d:3a-01
+light.light2:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:15:14:ae-01
+sensor.temp6:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cb:83-01-0405
+sensor.temp8:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:ca:90-01-0405
+sensor.temp6_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cb:83-01-0402
+sensor.temp4:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:ca:fe-01-0402
+sensor.temp9:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:b2:64-01-0402
+sensor.temp2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:b2:e5-01-0405
+sensor.temp3:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:ad:3c:8f-01-0402
+sensor.temp10:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cc:71-01-0402
+sensor.temp8_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:ca:90-01-0402
+sensor.temp2_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:b2:e5-01-0402
+sensor.temp3_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:ad:3c:8f-01-0405
+sensor.temp10_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cc:71-01-0405
+sensor.temp9_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:b2:64-01-0405
+sensor.temp7:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:ca:e9-01-0405
+sensor.temp7_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:ca:e9-01-0402
+sensor.temp5:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cc:62-01-0402
+sensor.temp1:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:f4:72:ae-01-0402
+sensor.temp5_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cc:62-01-0405
+sensor.temp1_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:f4:72:ae-01-0405
+sensor.temp4_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:ca:fe-01-0405
+media_player.den_speaker:
+  name:
+  platform: cast
+  unique_id: 97086d04-a2b9-7836-55c8-8386c6b04b02
+media_player.kitchen:
+  name:
+  platform: cast
+  unique_id: 7af65d91-c3ba-fd8e-f036-ade0df819a95
+media_player.book_corner:
+  name:
+  platform: cast
+  unique_id: 50529408-2aa2-96c7-9ac6-2b43133201ea
+media_player.living_room_speaker:
+  name:
+  platform: cast
+  unique_id: 7f8f8097-535d-0374-9581-b18be3f5ae01
+media_player.tv:
+  name:
+  platform: cast
+  unique_id: a4adfb89-e9d2-ecc9-616e-f3d3d89e2186
+media_player.vanjas:
+  name:
+  platform: cast
+  unique_id: 763f1cf1-d58a-8562-b0e4-90bef2ee616b
+media_player.top_floor_:
+  name:
+  platform: cast
+  unique_id: bd60fb08-fd57-48a1-a66f-518eb1bea308
+media_player.groundfloor:
+  name:
+  platform: cast
+  unique_id: 16209577-18ec-4da4-ba87-b15a8a9ac045
+sensor.daylight:
+  name:
+  platform: deconz
+  unique_id: 00:21:2e:ff:ff:01:01:c5-01
+sensor.temp1_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:f4:72:ae-02-0012
+sensor.temp2_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:b2:e5-02-0012
+sensor.temp6_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cb:83-02-0012
+sensor.temp9_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:b2:64-02-0012
+sensor.temp5_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cc:62-02-0012
+sensor.temp6_battery_level_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:cb:83-03-000c
+sensor.lumisensor_ht_22_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:ca:fe-02-0012
+sensor.temp2_battery_level_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:b2:e5-03-000c
+sensor.temp9_battery_level_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:b2:64-03-000c
+sensor.temp3_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:ad:3c:8f-02-0012
+sensor.temp1_battery_level_2:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:f4:72:ae-03-000c
+sensor.temp7_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:dc:ca:e9-02-0012
+zwave.aeotec_zw090_zstick_gen5_eu:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.office_u:
+  name:
+  platform: zwave
+  unique_id: node-2
+zwave.office_bi:
+  name:
+  platform: zwave
+  unique_id: node-6
+zwave.guestroom_philio:
+  name:
+  platform: zwave
+  unique_id: node-9
+zwave.masterbedroom_bed_u:
+  name:
+  platform: zwave
+  unique_id: node-11
+zwave.trapp:
+  name:
+  platform: zwave
+  unique_id: node-18

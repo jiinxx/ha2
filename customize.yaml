@@ -22,10 +22,43 @@ switch.0b110005002d25f202010f80:
   friendly_name: Nexaremote 2
 switch.0b110007002d25f203010f70:
   friendly_name: Nexaremote 3
-
-  binary_sensor.groundfloor:
-    custom_ui_state_card: floorplan
-    config: !include groundfloor.yaml
-  binary_sensor.upstairs:
-    custom_ui_state_card: floorplan
-    config: !include upstairs.yaml
+sensor.temp1_2:
+  hidden: true
+sensor.temp1:
+  friendly_name: Kök
+sensor.temp2:
+  hidden: true
+sensor.temp2_2:
+  friendly_name: Vardagsrum
+sensor.temp3_2:
+  hidden: true
+sensor.temp3:
+  friendly_name: Kamin
+sensor.temp4_2:
+  hidden: true
+sensor.temp4:
+  friendly_name: Tvättstuga
+sensor.temp5:
+  friendly_name: Sovrum
+sensor.temp5_2:
+  hidden: true
+sensor.temp6_2:
+  friendly_name: Arbetsrum  
+sensor.temp6:
+  hidden: true
+sensor.temp7_2:
+  friendly_name: Arbetsrum2
+sensor.temp7:
+  hidden: true
+sensor.temp8:
+  hidden: true
+sensor.temp8_2:
+  friendly_name: Gästrum
+sensor.temp9:
+  friendly_name: Vanja
+sensor.temp9_2:
+  hidden: true
+sensor.temp10_2:
+  hidden: true
+sensor.temp10:
+  friendly_name: Allrum
