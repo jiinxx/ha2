@@ -16,6 +16,8 @@
     service: switch.turn_on
     entity_id: group.custom_all_lights
 
+# REMOTE 11 ############################################
+
 - alias: 'Remote 11 on'
   hide_entity: True
   trigger:
@@ -35,6 +37,8 @@
     service: switch.turn_off
     entity_id: switch.switch_42
 
+# REMOTE 12 - Vardagsrum ################################
+
 - alias: 'Remote 12 on'
   hide_entity: True
   trigger:
@@ -44,7 +48,7 @@
   action:
     service: switch.turn_on
     entity_id: group.custom_living_room
-- alias: 'Remote 11 off'
+- alias: 'Remote 12 off'
   hide_entity: True
   trigger:
     platform: state
@@ -53,6 +57,8 @@
   action:
     service: switch.turn_off
     entity_id: group.custom_living_room
+
+# REMOTE 21 - Gastrum ####################################
       
 - alias: 'Remote 21 on'
   hide_entity: True
@@ -72,6 +78,8 @@
   action:
     service: switch.turn_off
     entity_id: group.custom_guest_room
+
+# REMOTE 22 - Arbetsrum ############################################
     
 - alias: 'Remote 22 on'
   hide_entity: True
@@ -91,6 +99,29 @@
   action:
     service: switch.turn_off
     entity_id: group.custom_office
+
+# REMOTE 23 - Sovrum ############################################
+
+- alias: 'Remote 23 on'
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: switch.remote_23
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: group.custom_master_bedroom
+- alias: 'Remote 23 off'
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: switch.remote_23
+    to: 'off'
+  action:
+    service: switch.turn_off
+    entity_id: group.custom_master_bedroom
+
+# REMOTE 24 - Maskros ############################################
 
 - alias: 'Remote 24 on'
   hide_entity: True

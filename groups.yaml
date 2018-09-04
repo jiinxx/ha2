@@ -9,6 +9,7 @@ custom_midfloor:
   entities:
     - group.custom_guest_room
     - group.custom_office
+    - group.custom_master_bedroom
     - light.maskros
 custom_groundfloor:
   name: Groundfloor
@@ -19,6 +20,9 @@ custom_outside:
   name: Outside
   entities:
     - light.light_1
+    - light.light_2
+    - light.light_7
+    - light.light_8
 custom_guest_room:
   name: Guest room
   entities:
@@ -33,6 +37,11 @@ custom_living_room:
   entities:
     - switch.switch_13
     - switch.switch_42
+custom_master_bedroom:
+  name: Master bedroom
+  entities:
+    - light.light_5
+    - light.light_6
 custom_temp:
   name: Temp
   entities:
