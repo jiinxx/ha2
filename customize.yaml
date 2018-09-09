@@ -62,3 +62,12 @@ sensor.temp10_2:
   hidden: true
 sensor.temp10:
   friendly_name: Allrum
+sensor.loft_humidity:
+  hidden: true
+sensor.loft_temperature:
+  friendly_name: Loft
+sensor.trapp_humidity:
+  hidden: true
+sensor.trapp_temperature:
+  friendly_name: Trapp
+

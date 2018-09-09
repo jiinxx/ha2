@@ -13,3 +13,11 @@
   action:
     service: switch.turn_off
     entity_id: group.custom_all_lights
+
+- alias: 'Outsidelights off when sun rises'
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: switch.turn_off
+    entity_id: group.custom_outside
