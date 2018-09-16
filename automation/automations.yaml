@@ -1,4 +1,5 @@
 - alias: 'Windowlights on when sun sets'
+  hide_entity: True
   trigger:
     platform: sun
     event: sunset
@@ -6,7 +7,17 @@
     service: switch.turn_on
     entity_id: group.custom_all_lights
 
+- alias: 'Windowlights on when sun sets2'
+  hide_entity: True
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: lights.turn_on
+    entity_id: group.custom_all_lights
+
 - alias: 'Windowlights off when sun rises'
+  hide_entity: True
   trigger:
     platform: sun
     event: sunrise
@@ -14,10 +25,11 @@
     service: switch.turn_off
     entity_id: group.custom_all_lights
 
-- alias: 'Outsidelights off when sun rises'
+- alias: 'Windowlights off when sun rises2'
+  hide_entity: True
   trigger:
     platform: sun
     event: sunrise
   action:
-    service: switch.turn_off
-    entity_id: group.custom_outside
+    service: lights.turn_off
+    entity_id: group.custom_all_lights

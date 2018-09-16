@@ -11,32 +11,30 @@ custom_midfloor:
     - group.custom_guest_room
     - group.custom_office
     - group.custom_master_bedroom
-    - light.maskros
+    - light.light_2
 
 custom_groundfloor:
   name: Groundfloor
   entities:
-    - group.custom_living_room
-    - switch.garage1_switch #trapp
+#    - group.custom_living_room
+    - switch.telldus_tzwp100_plugin_switch_switch_3
 
 custom_outside:
   name: Outside
   entities:
-    - light.light_1
-    - light.light2
-    - light.light_7
-    - light.light_8
+    - light.light_4
+    - light.light_6
 
 custom_guest_room:
   name: Guest room
   entities:
-    - switch.guestroom_philio_switch
+    - switch.philio_technology_corporation_pan114_smart_energy_plug_in_switch_switch
 
 custom_office:
   name: Office
   entities:
-    - switch.office_bi_switch
-    - switch.office_u_switch
+    - switch.telldus_tzwp100_plugin_switch_switch
+    - switch.unknown_node_2_switch
 
 custom_living_room:
   name: Living room
@@ -47,31 +45,30 @@ custom_living_room:
 custom_master_bedroom:
   name: Master bedroom
   entities:
+    - light.light_3
     - light.light_5
-    - light.light_6
 
 custom_temp:
   name: Temp
   entities:
-    - sensor.temp1
-    - sensor.temp1_2
-    - sensor.temp2
-    - sensor.temp2_2
-    - sensor.temp3
-    - sensor.temp3_2
-    - sensor.temp4
-    - sensor.temp4_2
-    - sensor.temp5
-    - sensor.temp5_2
-    - sensor.temp6
-    - sensor.temp6_2
-    - sensor.temp7
-    - sensor.temp7_2
-    - sensor.temp8
-    - sensor.temp8_2
-    - sensor.temp9
-    - sensor.temp9_2
-    - sensor.temp10
-    - sensor.temp10_2
+    - sensor.temperature_6 #MS 5
+    - sensor.humidity_7 #MS 5h
+    - sensor.temperature_8 #MS 10
+    - sensor.humidity_9 #MS 10h
+    - sensor.temperature_12 #MS 1
+    - sensor.humidity_13 #MS 1h
+    - sensor.temperature_14 #MS 2
+    - sensor.humidity_15 #MS 2h
+    - sensor.temperature_16 #MS 4
+    - sensor.humidity_17 #MS 4h
+    - sensor.multi_sensor_6
+    - sensor.multi_sensor_6_2
+    - sensor.temperature_18 #MS 7
+    - sensor.humidity_19 #MS 7h
+    - sensor.temperature_20 #MS 8
+    - sensor.humidity_21 #MS 8h
+    - sensor.temperature_10 #MS 9
+    - sensor.humidity_11 #MS 9h
     - sensor.loft_temperature
+    - sensor.vardagsrum_temperature
     - sensor.trapp_temperature

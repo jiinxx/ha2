@@ -15,7 +15,7 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml
-  api_password: !secret http_password
+#  api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: ha.rubble.se
   trusted_networks:
@@ -26,51 +26,54 @@ http:
 
 updater:
 
-discovery:
+#discovery:
 conversation:
 history:
 logbook:
 map:
 sun:
 
-#influxdb:
-#  host: 192.168.1.9
+deconz:
+  host: 192.168.0.222
 
-sensor:
-  - platform: yr
-  - platform: rfxtrx
-    automatic_add: true
-    devices:
-      085002005701000d59:
-        name: temp_backside
-      temp1:
-        name: Livingroom 1
-  - platform: mqtt
-    state_topic: "home/sparsnas"
-    name: "Sparsnäs energy consumption momentary"
-    unit_of_measurement: "W"
-    value_template: '{{ value_json.Watt | round(1) }}'
-  - platform: mqtt
-    state_topic: "home/sparsnas"
-    name: "Sparsnäs energy consumption over time"
-    unit_of_measurement: "kWh"
-    value_template: '{{ value_json.kWh | round(1) }}'
-  - platform: mqtt
-    state_topic: "home/sparsnas"
-    name: "Sparsnäs Battery remaining"
-    unit_of_measurement: "%"
-    value_template: '{{ value_json.battery | round(1) }}'
-#  - platform: rest
-#    resource: http://192.168.1.9:18003/location?group=home&user=Urban
-#    value_template: '{{value_json.users.Urban[0].location}}'
-#    method: GET
-#    name: Urban Internal location
-#    scan_interval: 5
-
-# Text to speech
-#tts:
-#  - platform: google
-
+##influxdb:
+##  host: 192.168.1.9
+#
+#sensor:
+#  - platform: yr
+#  - platform: rfxtrx
+#    automatic_add: true
+#    devices:
+#      085002005701000d59:
+#        name: temp_backside
+#      temp1:
+#        name: Livingroom 1
+#  - platform: mqtt
+#    state_topic: "home/sparsnas"
+#    name: "Sparsnäs energy consumption momentary"
+#    unit_of_measurement: "W"
+#    value_template: '{{ value_json.Watt | round(1) }}'
+#  - platform: mqtt
+#    state_topic: "home/sparsnas"
+#    name: "Sparsnäs energy consumption over time"
+#    unit_of_measurement: "kWh"
+#    value_template: '{{ value_json.kWh | round(1) }}'
+#  - platform: mqtt
+#    state_topic: "home/sparsnas"
+#    name: "Sparsnäs Battery remaining"
+#    unit_of_measurement: "%"
+#    value_template: '{{ value_json.battery | round(1) }}'
+##  - platform: rest
+##    resource: http://192.168.1.9:18003/location?group=home&user=Urban
+##    value_template: '{{value_json.users.Urban[0].location}}'
+##    method: GET
+##    name: Urban Internal location
+##    scan_interval: 5
+#
+## Text to speech
+##tts:
+##  - platform: google
+#
 zwave:
   usb_path: /dev/ttyACM0
 
@@ -87,14 +90,14 @@ mqtt_statestream:
 volvooncall:
   username: !secret volvooncall_username
   password: !secret volcooncall_password
-  
-logger:
-  default: info
-#  logs:
-#    homeassistant.components.volvooncall: debug
-#    homeassistant.components.*.volvooncall: debug
-#    volvooncall: debug
-#tellstick:
+
+#logger:
+#  default: info
+##  logs:
+##    homeassistant.components.volvooncall: debug
+##    homeassistant.components.*.volvooncall: debug
+##    volvooncall: debug
+##tellstick:
 
 nest:
   client_id: !secret nest_client_id
@@ -103,30 +106,28 @@ nest:
 rfxtrx:
   device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11SEJ09-if00-port0
   debug: True
-  
+#
 switch: !include switch.yaml
-    
-light:
-  - platform: rfxtrx
-    automatic_add: True
+#
+#light:
+#  - platform: rfxtrx
+#    automatic_add: True
+
 verisure:
   username: !secret verisure_username
   password: !secret verisure_password
 
 
-#light:
-#  platform: hue
-#  host: 192.168.1.12
-  
+
 ###############################
-# INCLUDES
+## INCLUDES
 
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
-script: !include scripts.yaml
+#script: !include scripts.yaml
 device_tracker: !include device_tracker.yaml
-
-variable: !include variables.yaml
-#binary_sensor: !include binary_sensors.yaml
-panel_custom: !include panel_custom.yaml
+#
+#variable: !include variables.yaml
+##binary_sensor: !include binary_sensors.yaml
+#panel_custom: !include panel_custom.yaml
 

@@ -1,73 +1,58 @@
-switch.switch_2:
-  friendly_name: Gästrum inner
-switch.telldus_tzwp100_plugin_switch_switch:
-  friendly_name: Arbetsrum U fönster
-switch.telldus_tzwp100_plugin_switch_switch_2:
-  friendly_name: Arbetsrum Bi fönster
-switch.telldus_tzwp100_plugin_switch_switch_3:
-  friendly_name: Lampa garage
-light.tradfri_bulb_e27_ws_opal_980lm:
-  friendly_name: Maskros lampan
-switch.telldus_tzwp100_plugin_switch_switch_4:
-  friendly_name: garage
-switch.0b110000004c02e201010f80:
-  friendly_name: Remote 1-2
-switch.0b110001004c02e203010f80:
-  friendly_name: Nedre TV
-switch.0b11000c004c02e202010f80:
-  friendly_name: Remote 1-4
-switch.0b110003002d25f201010f80:
-  friendly_name: Nexaremote 1
-switch.0b110005002d25f202010f80:
-  friendly_name: Nexaremote 2
-switch.0b110007002d25f203010f70:
-  friendly_name: Nexaremote 3
-sensor.temp1_2:
+#switch.switch_2:
+#  friendly_name: Gästrum inner
+#switch.telldus_tzwp100_plugin_switch_switch:
+#  friendly_name: Arbetsrum U fönster
+#switch.telldus_tzwp100_plugin_switch_switch_2:
+#  friendly_name: Arbetsrum Bi fönster
+#switch.telldus_tzwp100_plugin_switch_switch_3:
+#  friendly_name: Lampa garage
+#light.tradfri_bulb_e27_ws_opal_980lm:
+#  friendly_name: Maskros lampan
+#switch.telldus_tzwp100_plugin_switch_switch_4:
+#  friendly_name: garage
+#switch.0b110000004c02e201010f80:
+#  friendly_name: Remote 1-2
+#switch.0b110001004c02e203010f80:
+#  friendly_name: Nedre TV
+#switch.0b11000c004c02e202010f80:
+#  friendly_name: Remote 1-4
+#switch.0b110003002d25f201010f80:
+#  friendly_name: Nexaremote 1
+#switch.0b110005002d25f202010f80:
+#  friendly_name: Nexaremote 2
+#switch.0b110007002d25f203010f70:
+#  friendly_name: Nexaremote 3
+
+sensor.vardagsrum_humidity:
   hidden: true
-sensor.temp1:
-  friendly_name: Kök
-sensor.temp2:
-  hidden: true
-sensor.temp2_2:
-  friendly_name: Vardagsrum
-sensor.temp3_2:
-  hidden: true
-sensor.temp3:
-  friendly_name: Kamin
-sensor.temp4_2:
-  hidden: true
-sensor.temp4:
-  friendly_name: Tvättstuga
-sensor.temp5:
-  friendly_name: Sovrum
-sensor.temp5_2:
-  hidden: true
-sensor.temp6_2:
-  friendly_name: Arbetsrum  
-sensor.temp6:
-  hidden: true
-sensor.temp7_2:
-  friendly_name: Arbetsrum2
-sensor.temp7:
-  hidden: true
-sensor.temp8:
-  hidden: true
-sensor.temp8_2:
-  friendly_name: Gästrum
-sensor.temp9:
-  friendly_name: Vanja
-sensor.temp9_2:
-  hidden: true
-sensor.temp10_2:
-  hidden: true
-sensor.temp10:
-  friendly_name: Allrum
-sensor.loft_humidity:
-  hidden: true
-sensor.loft_temperature:
-  friendly_name: Loft
 sensor.trapp_humidity:
   hidden: true
-sensor.trapp_temperature:
-  friendly_name: Trapp
-
+sensor.loft_humidity:
+  hidden: true
+#sensor.temperature_6 #MS 5
+sensor.humidity_7: #MS 5h
+  hidden: true
+#sensor.temperature_8 #MS 10
+sensor.humidity_9: #MS 10h
+  hidden: true
+#sensor.temperature_12 #MS 1
+sensor.humidity_13: #MS 1h
+  hidden: true
+#sensor.temperature_14 #MS2
+sensor.humidity_15: #MS 2h
+  hidden: true
+#sensor.temperature_16 #MS 4
+sensor.humidity_17: #MS 4h
+  hidden: true
+#sensor.multi_sensor_6_2:
+sensor.multi_sensor_6:
+  hidden: true
+#sensor.temperature_18 #MS 7
+sensor.humidity_19: #MS 7h
+  hidden: true
+#sensor.temperature_20 #MS 8
+sensor.humidity_21: #MS 8h
+  hidden: true
+#sensor.temperature_10 #MS 9
+sensor.humidity_11: #MS 9h
+  hidden: true
