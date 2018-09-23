@@ -26,12 +26,30 @@ http:
 
 updater:
 
-#discovery:
+discovery:
 conversation:
 history:
 logbook:
 map:
 sun:
+logger:
+  default: debug
+#  default: info
+##  logs:
+##    homeassistant.components.volvooncall: debug
+##    homeassistant.components.*.volvooncall: debug
+##    volvooncall: debug
+##tellstick:
+
+recorder:
+  db_url: mysql://hauser:hapwd@192.168.1.9/homeassistant
+
+zwave:
+  usb_path: /dev/ttyACM0
+
+rfxtrx:
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11SEJ09-if00-port0
+  debug: True
 
 deconz:
   host: 192.168.0.222
@@ -39,30 +57,36 @@ deconz:
 ##influxdb:
 ##  host: 192.168.1.9
 #
-#sensor:
-#  - platform: yr
+#
+#light:
 #  - platform: rfxtrx
-#    automatic_add: true
-#    devices:
-#      085002005701000d59:
-#        name: temp_backside
-#      temp1:
-#        name: Livingroom 1
-#  - platform: mqtt
-#    state_topic: "home/sparsnas"
-#    name: "Sparsnäs energy consumption momentary"
-#    unit_of_measurement: "W"
-#    value_template: '{{ value_json.Watt | round(1) }}'
-#  - platform: mqtt
-#    state_topic: "home/sparsnas"
-#    name: "Sparsnäs energy consumption over time"
-#    unit_of_measurement: "kWh"
-#    value_template: '{{ value_json.kWh | round(1) }}'
-#  - platform: mqtt
-#    state_topic: "home/sparsnas"
-#    name: "Sparsnäs Battery remaining"
-#    unit_of_measurement: "%"
-#    value_template: '{{ value_json.battery | round(1) }}'
+#    automatic_add: True
+
+sensor:
+ # - platform: yr
+  - platform: rfxtrx
+    automatic_add: True
+    devices:
+      08500700e700011289:
+        name: Frys
+      0a5209028700010c2b0189:
+        name: Baksida
+  - platform: mqtt
+    state_topic: "home/sparsnas"
+    name: "Sparsnäs energy consumption momentary"
+    unit_of_measurement: "W"
+    value_template: '{{ value_json.Watt | round(1) }}'
+  - platform: mqtt
+    state_topic: "home/sparsnas"
+    name: "Sparsnäs energy consumption over time"
+    unit_of_measurement: "kWh"
+    value_template: '{{ value_json.kWh | round(1) }}'
+  - platform: mqtt
+    state_topic: "home/sparsnas"
+    name: "Sparsnäs Battery remaining"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.battery | round(1) }}'
+
 ##  - platform: rest
 ##    resource: http://192.168.1.9:18003/location?group=home&user=Urban
 ##    value_template: '{{value_json.users.Urban[0].location}}'
@@ -73,9 +97,6 @@ deconz:
 ## Text to speech
 ##tts:
 ##  - platform: google
-#
-zwave:
-  usb_path: /dev/ttyACM0
 
 mqtt:
   broker: 192.168.1.9
@@ -91,33 +112,15 @@ volvooncall:
   username: !secret volvooncall_username
   password: !secret volcooncall_password
 
-#logger:
-#  default: info
-##  logs:
-##    homeassistant.components.volvooncall: debug
-##    homeassistant.components.*.volvooncall: debug
-##    volvooncall: debug
-##tellstick:
-
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-rfxtrx:
-  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11SEJ09-if00-port0
-  debug: True
-#
 switch: !include switch.yaml
-#
-#light:
-#  - platform: rfxtrx
-#    automatic_add: True
 
 verisure:
   username: !secret verisure_username
   password: !secret verisure_password
-
-
 
 ###############################
 ## INCLUDES

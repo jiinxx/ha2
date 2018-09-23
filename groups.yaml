@@ -16,7 +16,7 @@ custom_midfloor:
 custom_groundfloor:
   name: Groundfloor
   entities:
-#    - group.custom_living_room
+    - group.custom_living_room
     - switch.telldus_tzwp100_plugin_switch_switch_3
 
 custom_outside:

@@ -1,5 +1,5 @@
 - platform: rfxtrx
-  automatic_add: False
+  automatic_add: True
   devices:
     0b110000004c02e201010f80:
       name: remote_11
@@ -49,3 +49,10 @@
       name: switch_41
     0b11000042bc0cfe01010f70:
       name: switch_42
+    
+    0b110000004aced601010f80:
+      name: nexaremote2_1
+    0b110001004aced602010f80:
+      name: nexaremote2_2
+    0b110002004aced603010f80:
+      name: nexaremote2_3

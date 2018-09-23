@@ -56,3 +56,41 @@ sensor.humidity_21: #MS 8h
 #sensor.temperature_10 #MS 9
 sensor.humidity_11: #MS 9h
   hidden: true
+
+sensor.upstairs_nest_protect_battery_health:
+  hidden: true
+sensor.upstairs_nest_protect_co_status:
+  hidden: true
+sensor.upstairs_nest_protect_smoke_status:
+  hidden: true
+binary_sensor.upstairs_nest_protect_online:
+  hidden: true
+sensor.downstairs_nest_protect_battery_health:
+  hidden: true
+sensor.downstairs_nest_protect_co_status:
+  hidden: true
+sensor.downstairs_nest_protect_smoke_status:
+  hidden: true
+binary_sensor.downstairs_nest_protect_online:
+  hidden: true
+
+binary_sensor.yme682_brake_fluid:
+  hidden: true
+binary_sensor.yme682_bulbs:
+  hidden: true
+binary_sensor.yme682_doors:
+  hidden: true
+binary_sensor.yme682_service:
+  hidden: true
+binary_sensor.yme682_washer_fluid:
+  hidden: true
+binary_sensor.yme682_windows:
+  hidden: true
+sensor.yme682_fuel_consumption:
+  hidden: true
+sensor.yme682_fuel_level:
+  hidden: true
+sensor.yme682_odometer:
+  hidden: true
+sensor.yme682_range:
+  hidden: true
