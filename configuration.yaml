@@ -33,39 +33,45 @@ logbook:
 map:
 sun:
 logger:
-  default: debug
-#  default: info
-##  logs:
+  default: info
+  logs:
+    homeassistant.components.deconz: debug
 ##    homeassistant.components.volvooncall: debug
 ##    homeassistant.components.*.volvooncall: debug
-##    volvooncall: debug
+    deconz: debug
 ##tellstick:
 
 recorder:
-  db_url: mysql://hauser:hapwd@192.168.1.9/homeassistant
+  db_url: !secret mariadb_connection_url
 
 zwave:
   usb_path: /dev/ttyACM0
 
 rfxtrx:
   device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A11SEJ09-if00-port0
-  debug: True
 
 deconz:
   host: 192.168.0.222
+  api_key: !secret deconz_api_key
 
-##influxdb:
-##  host: 192.168.1.9
-#
-#
-#light:
-#  - platform: rfxtrx
-#    automatic_add: True
+influxdb:
+  host: 192.168.1.9
+
+nibe:
+  client_id: !secret nibe_client_id
+  client_secret: !secret nibe_client_secret
+  redirect_uri: https://ha.rubble.se/api/nibe/auth
+  writeaccess: false # set to true to support climate write (needs new tokens)
+  systems:
+        - system: 55397
+          units:
+            - unit: 0
+              categories:
 
 sensor:
- # - platform: yr
+  - platform: yr
   - platform: rfxtrx
-    automatic_add: True
+    automatic_add: False
     devices:
       08500700e700011289:
         name: Frys
@@ -94,9 +100,10 @@ sensor:
 ##    name: Urban Internal location
 ##    scan_interval: 5
 #
-## Text to speech
-##tts:
-##  - platform: google
+
+# Text to speech
+tts:
+  - platform: google
 
 mqtt:
   broker: 192.168.1.9

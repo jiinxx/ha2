@@ -1,5 +1,5 @@
 - alias: 'Windowlights on when sun sets'
-  hide_entity: True
+#  hide_entity: True
   trigger:
     platform: sun
     event: sunset
@@ -8,16 +8,16 @@
     entity_id: group.custom_all_lights
 
 - alias: 'Windowlights on when sun sets2'
-  hide_entity: True
+#  hide_entity: True
   trigger:
     platform: sun
     event: sunset
   action:
     service: lights.turn_on
-    entity_id: group.custom_all_lights
+    entity_id: group.custom_master_bedroom
 
 - alias: 'Windowlights off when sun rises'
-  hide_entity: True
+#  hide_entity: True
   trigger:
     platform: sun
     event: sunrise
@@ -26,7 +26,7 @@
     entity_id: group.custom_all_lights
 
 - alias: 'Windowlights off when sun rises2'
-  hide_entity: True
+#  hide_entity: True
   trigger:
     platform: sun
     event: sunrise

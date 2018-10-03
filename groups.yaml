@@ -1,3 +1,15 @@
+#default_view:
+#  view: yes
+#  icon: mdi:home
+#  entities:
+#    - group.custom_all_lights
+#    - group.custom_midfloor
+#    - group.custom_groundfloor
+#    - group.custom_living_room
+#    - group.custom_guest_room
+#    - group.custom_office
+#    - group.custom_master_bedroom
+#    - group.custom_temp
 custom_all_lights:
   name: All Lights
   entities:
@@ -71,4 +83,4 @@ custom_temp:
     - sensor.humidity_11 #MS 9h
     - sensor.loft_temperature
     - sensor.vardagsrum_temperature
-    - sensor.trapp_temperature
+    - sensor.trapp_temperature  

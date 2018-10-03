@@ -94,3 +94,6 @@ sensor.yme682_odometer:
   hidden: true
 sensor.yme682_range:
   hidden: true
+sensor.085002035701004d59_temperature:
+  hidden: true
+
